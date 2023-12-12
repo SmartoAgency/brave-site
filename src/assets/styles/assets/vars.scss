@@ -1,0 +1,217 @@
+$default-font: 'HelveticaNeueCyr', sans-serif;
+$default-font2: 'montser', sans-serif;
+
+$mc2: #ff554c;
+$mc3: #e5df06;
+$mc4: #4f90b6;
+$gray: #878797;
+$text: #22223e;
+$wc: #fff;
+$bc: #000;
+$bc2: #000;
+
+$bg-color: rgb(233, 233, 225);
+$color-white: rgba(255, 255, 255, 1);
+$color-bej: #c6a682;
+
+$color-black: rgba(0, 0, 0, 1);
+$color-grey: #344742;
+$accent-color: #2a4635;
+$color-grennmedium: rgba(30, 69, 56, 1);
+$color-greendark: rgba(34, 54, 43, 1);
+$text-color: #808080;
+
+@mixin text-style-h-1() {
+  font-size: 38px;
+  font-weight: 200;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 84px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    font-size: 120px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 170px;
+  }
+}
+
+@mixin section-descr() {
+  font-size: 32px;
+  font-family: 'HelveticaNeueCyr';
+  font-weight: 300;
+  font-style: normal;
+  line-height: 100%;
+  // letter-spacing: -2.5px;
+  text-decoration: none;
+  text-transform: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 54px;
+    font-weight: 200;
+  }
+
+  @media screen and (min-width: 1366px) {
+    font-size: 95px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 125px;
+  }
+}
+
+@mixin section-title() {
+  font-size: 24px;
+  font-family: 'HelveticaNeueCyr';
+  font-weight: 300;
+  font-style: normal;
+  line-height: 100%;
+  // letter-spacing: -0.01em;
+  text-decoration: none;
+  text-transform: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 64px;
+  }
+}
+
+@mixin text-style-accent() {
+  font-size: 18px;
+  font-family: 'HelveticaNeueCyr';
+  font-weight: 300;
+  font-style: normal;
+  // letter-spacing: -0.72px;
+  text-decoration: none;
+  text-transform: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 36px;
+  }
+}
+
+@mixin text-style-txt() {
+  font-size: 16px;
+  font-family: 'HelveticaNeueCyr';
+  font-weight: 300;
+  font-style: normal;
+  line-height: 130%;
+  text-decoration: none;
+  text-transform: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 26px;
+  }
+}
+
+@mixin text-style-date() {
+  font-size: 14px;
+  font-family: 'HelveticaNeueCyr';
+  font-weight: 300;
+  font-style: normal;
+  line-height: 140%;
+  text-decoration: none;
+  text-transform: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 18px;
+  }
+}
+
+@mixin text-style-helpfull() {
+  font-size: 14px;
+  font-family: 'HelveticaNeueCyr';
+  font-weight: 300;
+  font-style: normal;
+  line-height: 130%;
+  text-decoration: none;
+  text-transform: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 20px;
+  }
+}
+
+@mixin text-style-btn() {
+  font-size: 14px;
+  font-family: 'HelveticaNeueCyr';
+  font-weight: 300;
+  font-style: normal;
+  line-height: 140%;
+  text-decoration: none;
+  text-transform: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 20px;
+  }
+}
+
+@mixin text-style-minor() {
+  font-size: 8px;
+  font-family: 'HelveticaNeueCyr';
+  font-weight: 300;
+  font-style: normal;
+  line-height: 130%;
+  text-decoration: none;
+  text-transform: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 10px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    font-size: 14px;
+  }
+}

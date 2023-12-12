@@ -1,0 +1,14 @@
+ul.breadcrumbs
+  li.breadcrumbs-item
+    a(href="#").breadcrumbs-item__link Головна
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+      <path d="M0.229187 7.24745L14.4584 7.24745M14.4584 7.24745L14.4584 6.25759L8.76669 1.30832M14.4584 7.24745L14.4584 8.2373L8.76669 12.6917" stroke="#444B55" stroke-width="1.5"/>
+    </svg>
+  if breadcrumbsSubitem
+    each v in breadcrumbsSubitem
+      li.breadcrumbs-item
+        a(href="#").breadcrumbs-item__link= v.label
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+          <path d="M0.229187 7.24745L14.4584 7.24745M14.4584 7.24745L14.4584 6.25759L8.76669 1.30832M14.4584 7.24745L14.4584 8.2373L8.76669 12.6917" stroke="#444B55" stroke-width="1.5"/>
+        </svg>
+  li.breadcrumbs-item__current--color.breadcrumbs-item= title_page
