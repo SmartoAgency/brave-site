@@ -97,6 +97,7 @@
     "i18next": "^19.8.4",
     "imagesloaded": "^5.0.0",
     "intl-tel-input": "^17.0.21",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.7.0",
     "ogl": "^1.0.0",
     "on-change": "^2.2.1",

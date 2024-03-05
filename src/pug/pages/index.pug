@@ -24,15 +24,308 @@ block scripts
   script(defer src='./assets/scripts/footer.bundle.js')
   script(defer src='./assets/scripts/index.bundle.js')
 block content
-  section.section.home-hero
+  section.section.home-hero 
+    .container
+      h1.hero-title.section-title Товариство «ВІДВАЖНИХ»
+      h2.hero-subtitle.section-title
+        i Будуємо країну!
+      .hero-advantages 
+        ul.hero-advantages__list 
+          li.hero-advantages__item 
+            p.hero-advantages__number 13
+            p.hero-advantages__descr.descr--max-width років на ринку нерухомості
+          li.hero-advantages__item 
+            p.hero-advantages__number 50
+            p.hero-advantages__descr активно будуємо тис м²
 
+        .logo-wrap--center 
+          +svg("logo-symbol")
+          a.hero__about-link.secondary-btn(href="/about") ПРО КОМПАНІЮ
+        
+        ul.hero-advantages__list 
+          li.hero-advantages__item 
+            p.hero-advantages__number 20
+            p.hero-advantages__descr реалізованих проектів
+          li.hero-advantages__item 
+            p.hero-advantages__number 12
+            p.hero-advantages__descr.descr--max-width тисяч щасливих мешканців
 
+  section.projects 
+    .container 
+      h2.section-title  Наші проекти
+      .projects__tool-bar 
+        .projects__pagination 04 / 12
+        .projects__filter 
+          button.projects__filter-btn Будуються
+          button.projects__filter-btn Здані
+          button.projects__filter-btn.active Всі об`єкти
+        .projects__navigation-wrap.tablet
+          .swiper-button-prev
+            button 
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M7.35711 1.5L1.35711 7.02904M1.35711 7.02904L7.35711 12.5M1.35711 7.02904C3.64282 7.02904 10.7 7.02916 12.6428 7.02916" stroke="#0A0D18" stroke-width="1.5" stroke-linecap="square"/>
+              </svg>
+          .swiper-button-next
+            button 
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M7.35711 1.5L1.35711 7.02904M1.35711 7.02904L7.35711 12.5M1.35711 7.02904C3.64282 7.02904 10.7 7.02916 12.6428 7.02916" stroke="#0A0D18" stroke-width="1.5" stroke-linecap="square"/>
+              </svg> 
 
+      .swiper-projects 
+        .swiper-wrapper   
+          .swiper-slide.project-card 
+            .project__img-wrap
+              img(src="./assets/images/projects/project1.jpg", alt="project").project__img
+              .project__ready Об`єкт здано
+              .project__right-top-wrap 
+                .project__postpayment Розтермінування 25 міс.
+                .project__credit Доступно в кредит
+                .project__partners Спільно з партнерами
+              .project__jeoselia 
+                +svg("oselia")
+            .project__title-loc-wrap
+              h3.project__title O.Krasa
+              a.project__location(href="/")
+                +svg("location")
+                p Гостомельське шосе, 49, Ірпінь, Київська обл.
+            ul.project__info-list 
+              li.project__info-item 
+                h4.project__info-label Квартири:
+                p.project__info-value 1157
+              li.project__info-item
+                h4.project__info-label Ціна:
+                p.project__info-value від 150 тис. $
+              li.project__info-item
+                h4.project__info-label Здача:
+                p.project__info-value IV кв 2025
+          .swiper-slide.project-card 
+            .project__img-wrap
+              img(src="./assets/images/projects/project1.jpg", alt="project").project__img
+              .project__ready Об`єкт здано
+              .project__right-top-wrap 
+                .project__postpayment Розтермінування 25 міс.
+                .project__credit Доступно в кредит
+                .project__partners Спільно з партнерами
+              .project__jeoselia 
+                +svg("oselia")
+            .project__title-loc-wrap
+              h3.project__title O.Krasa
+              a.project__location(href="/")
+                +svg("location")
+                p Гостомельське шосе, 49, Ірпінь, Київська обл.
+            ul.project__info-list 
+              li.project__info-item 
+                h4.project__info-label Квартири:
+                p.project__info-value 1157
+              li.project__info-item
+                h4.project__info-label Ціна:
+                p.project__info-value від 150 тис. $
+              li.project__info-item
+                h4.project__info-label Здача:
+                p.project__info-value IV кв 2025
+          .swiper-slide.project-card 
+            .project__img-wrap
+              img(src="./assets/images/projects/project1.jpg", alt="project").project__img
+              .project__ready Об`єкт здано
+              .project__right-top-wrap 
+                .project__postpayment Розтермінування 25 міс.
+                .project__credit Доступно в кредит
+                .project__partners Спільно з партнерами
+              .project__jeoselia 
+                +svg("oselia")
+            .project__title-loc-wrap
+              h3.project__title O.Krasa
+              a.project__location(href="/")
+                +svg("location")
+                p Гостомельське шосе, 49, Ірпінь, Київська обл.
+            ul.project__info-list 
+              li.project__info-item 
+                h4.project__info-label Квартири:
+                p.project__info-value 1157
+              li.project__info-item
+                h4.project__info-label Ціна:
+                p.project__info-value від 150 тис. $
+              li.project__info-item
+                h4.project__info-label Здача:
+                p.project__info-value IV кв 2025
+          .swiper-slide.project-card 
+            .project__img-wrap
+              img(src="./assets/images/projects/project1.jpg", alt="project").project__img
+              .project__ready Об`єкт здано
+              .project__right-top-wrap 
+                .project__postpayment Розтермінування 25 міс.
+                .project__credit Доступно в кредит
+                .project__partners Спільно з партнерами
+              .project__jeoselia 
+                +svg("oselia")
+            .project__title-loc-wrap
+              h3.project__title O.Krasa
+              a.project__location(href="/")
+                +svg("location")
+                p Гостомельське шосе, 49, Ірпінь, Київська обл.
+            ul.project__info-list 
+              li.project__info-item 
+                h4.project__info-label Квартири:
+                p.project__info-value 1157
+              li.project__info-item
+                h4.project__info-label Ціна:
+                p.project__info-value від 150 тис. $
+              li.project__info-item
+                h4.project__info-label Здача:
+                p.project__info-value IV кв 2025
+      .projects__btn-wrap--slider-project
+        a.general-button(href="/projects") ПОКАЗАТИ ВСІ ПРОЄКТИ
+        .projects__navigation-wrap.mobile
+          .swiper-button-prev
+            button 
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M7.35711 1.5L1.35711 7.02904M1.35711 7.02904L7.35711 12.5M1.35711 7.02904C3.64282 7.02904 10.7 7.02916 12.6428 7.02916" stroke="#0A0D18" stroke-width="1.5" stroke-linecap="square"/>
+              </svg>
+          .swiper-button-next
+            button 
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M7.35711 1.5L1.35711 7.02904M1.35711 7.02904L7.35711 12.5M1.35711 7.02904C3.64282 7.02904 10.7 7.02916 12.6428 7.02916" stroke="#0A0D18" stroke-width="1.5" stroke-linecap="square"/>
+              </svg> 
+  section.real-estate
+    .container
+      .real-estate__content 
+        h2.real-estate__title Давайте оберемо для Вас ідеальну нерухомість
+        form.real-estate__form
+          .select.real-estate__select-wrap
+            label(for="select3").real-estate__label Проект
+            .select__header
+              span.select__current Усі проекти
+              <svg class="select__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17157 7.99256L2.58203 9.41052L10.5398 17.4105L11.9503 18.8285L13.3682 17.418L17.3894 13.418L21.4105 9.41798L22.8284 8.0075L20.0074 5.17163L18.5895 6.58212L14.5684 10.5821L11.9652 13.1716L5.41794 6.58958L4.00747 5.17163L1.17157 7.99256Z" fill="#0A0D18"/>
+              </svg>
+            .select__body(tabindex="0")
+              .select__item Value 1
+              .select__item Value 2
+              .select__item Value 3
+              .select__item Value 4
+              .select__item Value 5 
+              .select__item Value 1
+              .select__item Value 2
+              .select__item Value 3
+              .select__item Value 4
+              .select__item Value 5 
+              .select__item Value 1
+              .select__item Value 2
+              .select__item Value 3
+              .select__item Value 4
+              .select__item Value 5 
 
+          .select.real-estate__select-wrap
+            label(for="select3").real-estate__label Тип квартири
+            .select__header
+              span.select__current Value 1
+              <svg class="select__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17157 7.99256L2.58203 9.41052L10.5398 17.4105L11.9503 18.8285L13.3682 17.418L17.3894 13.418L21.4105 9.41798L22.8284 8.0075L20.0074 5.17163L18.5895 6.58212L14.5684 10.5821L11.9652 13.1716L5.41794 6.58958L4.00747 5.17163L1.17157 7.99256Z" fill="#0A0D18"/>
+              </svg>
+            .select__body
+              .select__item Value 1
+              .select__item Value 2
+              .select__item Value 3
+              .select__item Value 4
+              .select__item Value 5  
 
-
-
-
+          .real-estate__select-wrap
+            label(for="range").real-estate__label Площа, м² 
+            input(type="range" id="doubleRange" name="doubleRange" min="0" max="100" step="1").real-estate__range
+    
+          .select.real-estate__select-wrap
+            label(for="select3").real-estate__label Місто
+            .select__header
+              span.select__current Value 1
+              <svg class="select__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17157 7.99256L2.58203 9.41052L10.5398 17.4105L11.9503 18.8285L13.3682 17.418L17.3894 13.418L21.4105 9.41798L22.8284 8.0075L20.0074 5.17163L18.5895 6.58212L14.5684 10.5821L11.9652 13.1716L5.41794 6.58958L4.00747 5.17163L1.17157 7.99256Z" fill="#0A0D18"/>
+              </svg>
+            .select__body
+              .select__item Value 1
+              .select__item Value 2
+              .select__item Value 3
+              .select__item Value 4
+              .select__item Value 5    
+          .projects__btn-wrap  
+            button.real-estate__btn(type="submit" value="Надіслати") ШУКАТИ ПЛАНУВАННЯ
+  section.news-section 
+    .container
+      h2.news-section__title.section-title Новини
+      .news__container--last
+        .news-card 
+          img.news-card__img(src="./assets/images/home/news1.jpg", alt="news")
+          .news-card__content-wrap 
+            .news-card__header 
+              .news-card__type АКЦІЯ
+              .news-card__date-wrap
+                <svg class="news-card__date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M15.9914 5.5H6.00991C5.22239 5.5 4.58398 6.13841 4.58398 6.92593V16.9074C4.58398 17.6949 5.22239 18.3333 6.00991 18.3333H15.9914C16.7789 18.3333 17.4173 17.6949 17.4173 16.9074V6.92593C17.4173 6.13841 16.7789 5.5 15.9914 5.5Z" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.75 3.66699V6.41699" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.25 3.66699V6.41699" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4.58398 9.16699H17.4173" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                span.news-card__date 01 Лис. 2023
+            .news-card__title Оголошено прийом творів на здобуття Літературної премії Ірпеня за 2022-2023 роки
+            .news-card__descr Літературна премія Ірпеня – щорічна всеукраїнська премія у галузі літератури, заснована 2020 року товариством “Відважних” та Інвестиційною радою Ірпеня. Завдання премії – пошук нових авторів із метою їх мотивації до подальшої творчості.
+            a.news-card__link ЧИТАТИ НОВИНУ
+        .news-card 
+          img.news-card__img(src="./assets/images/home/news1.jpg", alt="news")
+          .news-card__content-wrap 
+            .news-card__header 
+              .news-card__type АКЦІЯ
+              .news-card__date-wrap
+                <svg class="news-card__date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M15.9914 5.5H6.00991C5.22239 5.5 4.58398 6.13841 4.58398 6.92593V16.9074C4.58398 17.6949 5.22239 18.3333 6.00991 18.3333H15.9914C16.7789 18.3333 17.4173 17.6949 17.4173 16.9074V6.92593C17.4173 6.13841 16.7789 5.5 15.9914 5.5Z" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.75 3.66699V6.41699" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.25 3.66699V6.41699" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4.58398 9.16699H17.4173" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                span.news-card__date 01 Лис. 2023
+            .news-card__title Оголошено прийом творів на здобуття Літературної премії Ірпеня за 2022-2023 роки
+            .news-card__descr Літературна премія Ірпеня – щорічна всеукраїнська премія у галузі літератури, заснована 2020 року товариством “Відважних” та Інвестиційною радою Ірпеня. Завдання премії – пошук нових авторів із метою їх мотивації до подальшої творчості.
+            a.news-card__link ЧИТАТИ НОВИНУ
+      .projects__btn-wrap
+        a.general-button(href="/news") ПОКАЗАТИ ВСІ ПРОЄКТИ
+  .filler
+    .filler__logo-wrap--circle 
+      +svg("logo-symbol").filler__logo-icon
+  section.contacts
+    .container
+      h2.section-title.contacts__title Контакти 
+      .contacts__blocks-wrap 
+        .contact-block__info
+          h3.contact-block__title Наш головний офіс
+          
+          .contact-block__address-wrap
+            label.contact-block__label НАША АДРЕСА:
+            .contact-block__address-content 
+              p.contact-block__text Київська обл., м. Буча, вул., Шевченка, 1 а
+              a(href="/").general-button ПРОКЛАСТИ МАРШРУТ
+          .contact-block__address-wrap
+            label.contact-block__label ГРАФІК РОБОТИ:
+            p.contact-block__text Пн-Нд 08:00 - 20:00 (Без перерви та вихідних)
+          .contact-block__address-wrap
+            label.contact-block__label ТЕЛЕФОНИ::
+            .contact-block__phones
+              a(href="tel:+380968880782").contact-block__text +380 (96) 888 07 82
+              a(href="tel:+380638880782").contact-block__text +380 (63) 888 07 82
+              a(href="tel:+380508880782").contact-block__text +380 (50) 888 07 82
+          .contact-block__address-wrap
+            label.contact-block__label E-MAIL:
+            a(href="mailto:brave.irpin@gmail.com").contact-block__text brave.irpin@gmail.com
+          .contact-block__address-wrap
+            label.contact-block__label СОЦМЕРЕЖІ::
+            .contact-block__socials 
+              a(href="#").contact-block__text Youtube
+              a(href="#").contact-block__text Facebook
+              a(href="#").contact-block__text Instagram
+        
+        .contact-block__map 
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.784609657787!2d30.243503911218795!3d50.51957437148703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b33d28f98b75d%3A0x5e391ff7137248fd!2z0LwsINCy0YPQu9C40YbRjyDQqNC10LLRh9C10L3QutCwLCAxINCQLCDQkdGD0YfQsCwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0LsuLCAwODI5Mg!5e0!3m2!1suk!2sua!4v1708002571299!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        .contact-block__info.contact-block__form
+          h3.contact-block__title.form__title Замовити дзвінок
+          p.contact-block__form-descr Якщо у вас виникли питання або потрібна консультація, наші менеджери з радістю допоможуть вам!
+          +form 
 
 block footer
   include ../includes/footer.pug

@@ -1,0 +1,119 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'property'
+    var id_page = 'id-page-property'
+    var class_page = 'class-page-property'
+    var headerCustomClass = 'type2' 
+    var breadcrumbsSubitem = [
+     
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/footer.bundle.js')
+  script(defer src='./assets/scripts/property.bundle.js')
+block content
+  section.property.page-padding.container
+    h2.section-title Нерухомість
+    include ../includes/breadcrumbs.pug
+    form.real-estate__form
+      .filter__label фільтр
+      .select.real-estate__select-wrap
+        label(for="select3").real-estate__label Проект
+        .select__header
+          span.select__current Усі проекти
+          <svg class="select__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17157 7.99256L2.58203 9.41052L10.5398 17.4105L11.9503 18.8285L13.3682 17.418L17.3894 13.418L21.4105 9.41798L22.8284 8.0075L20.0074 5.17163L18.5895 6.58212L14.5684 10.5821L11.9652 13.1716L5.41794 6.58958L4.00747 5.17163L1.17157 7.99256Z" fill="#0A0D18"/>
+          </svg>
+        .select__body(tabindex="0")
+          .select__item Value 1
+          .select__item Value 2
+          .select__item Value 3
+          .select__item Value 4
+          .select__item Value 5 
+          .select__item Value 1
+          .select__item Value 2
+          .select__item Value 3
+          .select__item Value 4
+          .select__item Value 5 
+          .select__item Value 1
+          .select__item Value 2
+          .select__item Value 3
+          .select__item Value 4
+          .select__item Value 5 
+
+      .select.real-estate__select-wrap
+        label(for="select3").real-estate__label Тип квартири
+        .select__header
+          span.select__current Value 1
+          <svg class="select__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17157 7.99256L2.58203 9.41052L10.5398 17.4105L11.9503 18.8285L13.3682 17.418L17.3894 13.418L21.4105 9.41798L22.8284 8.0075L20.0074 5.17163L18.5895 6.58212L14.5684 10.5821L11.9652 13.1716L5.41794 6.58958L4.00747 5.17163L1.17157 7.99256Z" fill="#0A0D18"/>
+          </svg>
+        .select__body
+          .select__item Value 1
+          .select__item Value 2
+          .select__item Value 3
+          .select__item Value 4
+          .select__item Value 5  
+
+      .real-estate__select-wrap
+        label(for="range").real-estate__label Площа, м² 
+        input(type="range" id="doubleRange" name="doubleRange" min="0" max="100" step="1").real-estate__range
+
+      .select.real-estate__select-wrap
+        label(for="select3").real-estate__label Місто
+        .select__header
+          span.select__current Value 1
+          <svg class="select__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17157 7.99256L2.58203 9.41052L10.5398 17.4105L11.9503 18.8285L13.3682 17.418L17.3894 13.418L21.4105 9.41798L22.8284 8.0075L20.0074 5.17163L18.5895 6.58212L14.5684 10.5821L11.9652 13.1716L5.41794 6.58958L4.00747 5.17163L1.17157 7.99256Z" fill="#0A0D18"/>
+          </svg>
+        .select__body
+          .select__item Value 1
+          .select__item Value 2
+          .select__item Value 3
+          .select__item Value 4
+          .select__item Value 5    
+      .projects__btn-wrap  
+        button.real-estate__btn(type="submit" value="Надіслати") ШУКАТИ ПЛАНУВАННЯ
+    .property__container 
+      .property-card 
+        .property-card__img-wrap 
+          img.property-card__img(src="./assets/images/projects/project1.jpg", alt="")
+          a.property-card__location(href="/")
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect width="24" height="24" rx="6" fill="#77B551"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6C9.87878 6 8 7.24528 8 9.62264C8 10.1208 8.28283 10.8491 8.42424 11.1509L12 18V11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39545 10.8954 7.50003 12 7.5V6ZM12 11.5C12 11.5 12 11.5 12 11.5C13.1046 11.5 14 10.6046 14 9.5C14 8.39543 13.1046 7.5 12 7.5C12 7.5 12 7.5 12 7.5V6C14.1212 6 16 7.24528 16 9.62264C16 10.1208 15.7172 10.8491 15.5757 11.1509L12 18V11.5Z" fill="#F2F5F8"/>
+            </svg>
+            span м.Ірпінь
+          h3.property-card__project-title жк River Port
+        .property-card__info-wrap 
+          .property-card__info-img-wrap  
+            img(src="./assets/images/projects/interier.jpg", alt="")
+          .property-card__info-text
+            h4.property-card__info-title 3-кімнатна квартира
+            ul.property-card__info-list
+              li.property-card__info-item 
+                p Загальна площа:
+                  span 88,08
+                  | м²
+              li.property-card__info-item 
+                p Житлова площа:
+                  span 88,08
+                  | м²
+            a(href="").general-button ДИВИТИСЯ ПЛАНУВАННЯ
+    .projects__btn-wrap
+      button(type="button" data-more-projects).general-button ПОКАЗАТИ Більше 
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

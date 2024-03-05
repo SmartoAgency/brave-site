@@ -1,35 +1,82 @@
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: local('HelveticaNeueCyr Thin'), local('HelveticaNeueCyr-Thin'),
-    url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff'),
-    url('../fonts/HelveticaNeueCyr-Thin.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'HelveticaNeueCyr';
+//   src: local('HelveticaNeueCyr Thin'), local('HelveticaNeueCyr-Thin'),
+//     url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff'),
+//     url('../fonts/HelveticaNeueCyr-Thin.woff2') format('woff2');
+//   font-weight: 200;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'HelveticaNeueCyr';
+//   src: local('HelveticaNeueCyr Light'), local('HelveticaNeueCyr-Light'),
+//     url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'),
+//     url('../fonts/HelveticaNeueCyr-Light.woff2') format('woff2');
+//   font-weight: 300;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'HelveticaNeueCyr';
+//   src: local('HelveticaNeueCyr Roman'), local('HelveticaNeueCyr-Roman'),
+//     url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+//     url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2');
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'HelveticaNeueCyr';
+//   src: local('HelveticaNeueCyr Medium'), local('HelveticaNeueCyr-Medium'),
+//     url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+//     url('../fonts/HelveticaNeueCyr-Medium.woff2') format('woff2');
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+
+
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: local('HelveticaNeueCyr Light'), local('HelveticaNeueCyr-Light'),
-    url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'),
-    url('../fonts/HelveticaNeueCyr-Light.woff2') format('woff2');
+  font-family: 'PFDinDisplayPro';
+  src: local('PFDinDisplayPro Light'), local('PFDinDisplayPro-Light'),
+    url('../fonts/PFDinDisplayPro-Light.woff') format('woff'),
+    url('../fonts/PFDinDisplayPro-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: 'PFDinDisplayPro';
+  src: local('PFDinDisplayPro LightItalic'), local('PFDinDisplayPro-LightItalic'),
+    url('../fonts/PFDinDisplayPro-LightItalic.woff') format('woff'),
+    url('../fonts/PFDinDisplayPro-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: local('HelveticaNeueCyr Roman'), local('HelveticaNeueCyr-Roman'),
-    url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
-    url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2');
+  font-family: 'PFDinDisplayPro';
+  src: local('PFDinDisplayPro Regular'), local('PFDinDisplayPro-Regular'),
+    url('../fonts/PFDinDisplayPro-Regular.woff') format('woff'),
+    url('../fonts/PFDinDisplayPro-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: local('HelveticaNeueCyr Medium'), local('HelveticaNeueCyr-Medium'),
-    url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
-    url('../fonts/HelveticaNeueCyr-Medium.woff2') format('woff2');
+  font-family: 'PFDinDisplayPro';
+  src: local('PFDinDisplayPro Italic'), local('PFDinDisplayPro-Italic'),
+    url('../fonts/PFDinDisplayPro-Italic.woff') format('woff'),
+    url('../fonts/PFDinDisplayPro-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PFDinDisplayPro';
+  src: local('PFDinDisplayPro Medium'), local('PFDinDisplayPro-Medium'),
+    url('../fonts/PFDinDisplayPro-Medium.woff') format('woff'),
+    url('../fonts/PFDinDisplayPro-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }

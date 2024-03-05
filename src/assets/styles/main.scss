@@ -13,15 +13,16 @@
 @import './assets/animation'; // анимации
 @import './assets/loader.scss';
 @import './thank-you-popup.scss';
-
-@import './assets/interface'; // main style
-@import './assets/breadcrubs'; // main style
-@import './assets/templates.scss';
 // includes
 @import './header';
 @import './footer';
 @import './404';
 @import './includes/navigation.scss';
+
+@import './assets/interface'; // main style
+@import './assets/breadcrubs'; // main style
+@import './assets/templates.scss';
+
 
 @import '../../pug/components/form/form';
 @import '../../pug/components/toster/toster';

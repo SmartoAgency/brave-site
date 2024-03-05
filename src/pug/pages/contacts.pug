@@ -1,0 +1,68 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'contacts'
+    var id_page = 'id-page-contacts'
+    var class_page = 'class-page-contacts'
+    var headerCustomClass = 'type2' 
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/footer.bundle.js')
+  script(defer src='./assets/scripts/contacts.bundle.js')
+block content
+  section.contacts.contacts-page
+    .container
+      h2.section-title.contacts__title Контакти 
+      .contacts__blocks-wrap 
+        .contact-block__info
+          h3.contact-block__title Наш головний офіс
+          
+          .contact-block__address-wrap
+            label.contact-block__label НАША АДРЕСА:
+            .contact-block__address-content 
+              p.contact-block__text Київська обл., м. Буча, вул., Шевченка, 1 а
+              a(href="/").general-button ПРОКЛАСТИ МАРШРУТ
+          .contact-block__address-wrap
+            label.contact-block__label ГРАФІК РОБОТИ:
+            p.contact-block__text Пн-Нд 08:00 - 20:00 (Без перерви та вихідних)
+          .contact-block__address-wrap
+            label.contact-block__label ГРАФІК РОБОТИ:
+            .contact-block__phones
+              a(href="tel:+380968880782").contact-block__text +380 (96) 888 07 82
+              a(href="tel:+380638880782").contact-block__text +380 (63) 888 07 82
+              a(href="tel:+380508880782").contact-block__text +380 (50) 888 07 82
+          .contact-block__address-wrap
+            label.contact-block__label E-MAIL:
+            a(href="mailto:brave.irpin@gmail.com").contact-block__text brave.irpin@gmail.com
+          .contact-block__address-wrap
+            label.contact-block__label E-MAIL:
+            .contact-block__socials 
+              a(href="#").contact-block__text Youtube
+              a(href="#").contact-block__text Facebook
+              a(href="#").contact-block__text Instagram
+        
+        .contact-block__map 
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.784609657787!2d30.243503911218795!3d50.51957437148703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b33d28f98b75d%3A0x5e391ff7137248fd!2z0LwsINCy0YPQu9C40YbRjyDQqNC10LLRh9C10L3QutCwLCAxINCQLCDQkdGD0YfQsCwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0LsuLCAwODI5Mg!5e0!3m2!1suk!2sua!4v1708002571299!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        .contact-block__info.contact-block__form
+          h3.contact-block__title.form__title Замовити дзвінок
+          p.contact-block__form-descr Якщо у вас виникли питання або потрібна консультація, наші менеджери з радістю допоможуть вам!
+          +form 
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

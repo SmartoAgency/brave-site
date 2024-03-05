@@ -1,0 +1,158 @@
+.single-property {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  @include tablet {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+  @include desktop {
+    padding-top: 160px;
+  }
+
+  .section-title {
+    margin-bottom: 12px;
+    @include desktop {
+      margin-bottom: 20px;
+    }
+  }
+  &__info-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    @include tablet {
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    @include laptop {
+      gap: 20px;
+      flex-direction: row;
+      margin-bottom: 20px;
+    }
+  }
+  &__info-block {
+    border-radius: 20px;
+    border: 1px solid $dark-color;
+    padding: 20px;
+    flex: 2;
+    @include tablet {
+      padding: 40px 20px;
+    }
+    @include laptop {
+      padding: 20px;
+    }
+    &:first-child {
+      padding-bottom:20px;
+    }
+    &:nth-child(2n) {
+      flex: 1;
+    }
+  }
+  &__block-title {
+    @include block-title;
+    margin-bottom: 20px;
+  }
+  &__info-block--general {
+    display: flex;
+    gap: 20px;
+    flex-direction: column-reverse;
+    @include tablet {
+      flex-direction: column;
+      gap: 40px;
+    }
+    @include laptop {
+      flex-direction: row;
+    }
+    table {
+      width: 150px;
+    }
+  }
+  &__text-part {
+    flex: 1;
+
+    table {
+      margin: 20px 0;
+      @include tablet {
+        margin: 28px 0;
+      }
+    }
+  }
+  &__img-part {
+    border-radius: 12px;
+    background: $light-color;
+    overflow: hidden;
+    flex: 1;
+    height: 460px;
+    img{
+      object-fit: contain;
+      object-position: center;
+      width:100%;
+      height:100%;
+    }
+  }
+  th,
+  td {
+    padding-bottom: 12px;
+  }
+  th {
+    color: $secondary-dark-color;
+    @include descr-text;
+    width: 50%;
+  }
+  td {
+    @include descr-text;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__main-params {
+    overflow: hidden;
+    background: $light-color;
+    border-radius: 12px; // 1
+    border: 1px solid $dark-color;
+    margin-bottom: 20px;
+    .row {
+      padding: 12px 20px;
+      display: flex;
+      &:first-child {
+        border-bottom: 1px solid $dark-color;
+      }
+      h4 {
+        color: $secondary-dark-color;
+        @include descr-text;
+        width: 50%;
+      }
+      p {
+        @include descr-text;
+      }
+    }
+  }
+  &__plan-wrap {
+    width: 100%;
+    height: 292px;
+    border-radius: 12px;
+    background-color: $light-color;
+    @include tablet {
+    height: 680px;
+    }
+    img{
+      object-fit: contain;
+      object-position: center;
+      width:100%;
+      height:100%;
+    }
+  }
+}
+.single-property__other {
+padding-bottom: 80px;
+@include tablet {
+padding-bottom: 150px;}
+@include desktop {
+padding-bottom: 100px;}
+  .single-property__block-title {
+    width: 100%;
+    text-align: center;
+  }
+}

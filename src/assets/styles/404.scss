@@ -1,16 +1,21 @@
 .notFound {
-    @include laptop {
+    height:100vh;
+    // @include laptop {
 
-        height: 100%
-    }
+    //     height: 100%
+    // }
 }
 
 .notFound-bg {
 
     background-size: cover;
-    padding-top: 110px;
+    padding-top: 100px;
+    height:100%;
     width: 100%;
-
+    background-image: url('../images/home/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     @include tablet {
         padding-top: 200px;
@@ -19,20 +24,18 @@
     @include laptop {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: center;
+        
         height: 100%;
-        padding-top: 60px;
+        padding-top: 130px;
     }
 
     @include desktop {
-        padding-top: 68px;
+        padding-top: 200px;
     }
 }
 
 .notFound__text {
-    @include laptop {
-        align-self: center;
-    }
+    
 
 }
 
@@ -54,28 +57,23 @@
         text-align: center;
         font-size: 120px;
         line-height: 100%;
-        font-weight: 700;
-        color: $color-white;
+        font-weight: 400;
+        color: $light-color;
 
-        @include tablet {
-            font-size: 200px;
-        }
-
-        @include laptop {
-            font-size: 250px;
-        }
+        
+        
 
         @include desktop {
-            font-size: 400px;
+            font-size: 200px;
         }
     }
 
     h1 {
-        font-size: 30px;
-        font-weight: 300;
-        line-height: 100%;
+        @include section-title;
+        
+        
         text-align: center;
-        color: $color-grey;
+        color: $dark-color;
 
         @include tablet {
             font-size: 36px;
@@ -195,3 +193,4 @@
     }
 
 }
+

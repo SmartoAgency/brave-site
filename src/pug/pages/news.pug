@@ -1,0 +1,77 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'news'
+    var id_page = 'id-page-news'
+    var class_page = 'class-page-news'
+    var headerCustomClass = 'type2' 
+    var breadcrumbsSubitem = [
+     
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/footer.bundle.js')
+  script(defer src='./assets/scripts/news.bundle.js')
+block content
+  section.news.page-padding.container
+    h2.section-title Новини та акції
+    include ../includes/breadcrumbs.pug
+    .news__filter
+      .filter__label фільтр
+      ul.filter__list 
+        li 
+          button.filter__button.active Усі
+        li 
+          button.filter__button Новини
+        li 
+          button.filter__button Акції
+
+    .news__container 
+      .news-card 
+        img.news-card__img(src="./assets/images/home/news1.jpg", alt="news")
+        .news-card__content-wrap 
+          .news-card__header 
+            .news-card__type АКЦІЯ
+            .news-card__date-wrap
+              <svg class="news-card__date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M15.9914 5.5H6.00991C5.22239 5.5 4.58398 6.13841 4.58398 6.92593V16.9074C4.58398 17.6949 5.22239 18.3333 6.00991 18.3333H15.9914C16.7789 18.3333 17.4173 17.6949 17.4173 16.9074V6.92593C17.4173 6.13841 16.7789 5.5 15.9914 5.5Z" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.75 3.66699V6.41699" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.25 3.66699V6.41699" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.58398 9.16699H17.4173" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              span.news-card__date 01 Лис. 2023
+          .news-card__title Оголошено прийом творів на здобуття Літературної премії Ірпеня за 2022-2023 роки
+          .news-card__descr Літературна премія Ірпеня – щорічна всеукраїнська премія у галузі літератури, заснована 2020 року товариством “Відважних” та Інвестиційною радою Ірпеня. Завдання премії – пошук нових авторів із метою їх мотивації до подальшої творчості.
+          a.news-card__link ЧИТАТИ НОВИНУ
+      .news-card 
+        img.news-card__img(src="./assets/images/home/news1.jpg", alt="news")
+        .news-card__content-wrap 
+          .news-card__header 
+            .news-card__type АКЦІЯ
+            .news-card__date-wrap
+              <svg class="news-card__date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M15.9914 5.5H6.00991C5.22239 5.5 4.58398 6.13841 4.58398 6.92593V16.9074C4.58398 17.6949 5.22239 18.3333 6.00991 18.3333H15.9914C16.7789 18.3333 17.4173 17.6949 17.4173 16.9074V6.92593C17.4173 6.13841 16.7789 5.5 15.9914 5.5Z" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.75 3.66699V6.41699" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.25 3.66699V6.41699" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.58398 9.16699H17.4173" stroke="#8E9098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              span.news-card__date 01 Лис. 2023
+          .news-card__title Оголошено прийом творів на здобуття Літературної премії Ірпеня за 2022-2023 роки
+          .news-card__descr Літературна премія Ірпеня – щорі
+          a.news-card__link ЧИТАТИ НОВИНУ
+
+    .projects__btn-wrap
+      button(type="button" data-more-projects).general-button ПОКАЗАТИ Більше 
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

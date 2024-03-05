@@ -16,15 +16,15 @@ mixin form(attr)
 					.input-title Введіть Ваш телефон
 					input(type='text' name="phone" placeholder="Телефон:").form-field__input
 					.input-message(data-input-message)
-			//- .form-field.disabled.form-field-input(data-field-input data-field-email data-status="field--inactive")
-			//- 	.input-title.text-style-h-4.text-gray Email:
-			//- 	input(type='text' name="email" placeholder="Введіть email").form-field__input
-			//- 	.input-message(data-input-message)
-			//- .form-field.disabled.form-field-input(data-field-input data-field-comment data-status="field--inactive")
-			//- 	.input-title.text-style-h-4.text-gray Коментар:
-			//- 	textarea(type='text' name="comment" placeholder="Введіть повідомлення").form-field__input.text-input
-			//- 	.input-message(data-input-message)
+				//- .form-field.disabled.form-field-input(data-field-input data-field-email data-status="field--inactive")
+				//- 	.input-title.text-style-h-4.text-gray Email:
+				//- 	input(type='text' name="email" placeholder="Введіть email").form-field__input
+				//- 	.input-message(data-input-message)
+				.form-field.form-field-input(data-field-input data-field-comment data-status="field--inactive")
+					.input-title Коментар:
+					textarea(type='text' name="comment" placeholder="Введіть повідомлення").form-field__input.text-input
+					.input-message(data-input-message)
 			.form__button-wrapper
-				p.form__disclaimer Натискаючи “Надіслати”, ви надаєте згоду на обробку, зберігання та використання вших пресональних данних.
-				button( type="submit" data-btn-submit).button-30.form__button
-					span.submit-btn__text(data-btn-submit-text) Надіслати 
+				
+				button( type="submit" data-btn-submit).general-button
+					span.submit-btn__text(data-btn-submit-text) НАДІСЛАТИ ПОВІДОМЛЕННЯ

@@ -1,0 +1,19 @@
+<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="14" height="14" fill="#1E1E1E"/>
+<g id="About" clip-path="url(#clip0_1_2)">
+<rect width="1920" height="4417" transform="translate(-74 -3461)" fill="#F2F5F8"/>
+<g id="Partners">
+<g id="Logos">
+<g id="Arrow">
+<rect x="-13.5" y="27.5" width="41" height="41" rx="5.5" transform="rotate(-90 -13.5 27.5)" stroke="#0A0D18"/>
+<path id="Vector 177" d="M7.35711 1.5L1.35711 7.02904M1.35711 7.02904L7.35711 12.5M1.35711 7.02904C3.64282 7.02904 10.7 7.02916 12.6428 7.02916" stroke="#0A0D18" stroke-width="1.5" stroke-linecap="square"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1_2">
+<rect width="1920" height="4417" fill="white" transform="translate(-74 -3461)"/>
+</clipPath>
+</defs>
+</svg>

@@ -5,18 +5,46 @@
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(12px);
   z-index: 1000;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out 0.2s;
   opacity: 1;
-  max-height: 100%;
+  
 
   &.hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    max-height: 0;
+    
   }
 }
-
+.modal-form{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  background: $bg-color;
+  border: none;
+  transition: transform 0.3s ease-in-out 0.3s, opacity 0.3s ease 0.3s;
+  opacity: 1;
+  padding: 20px;
+  padding-bottom: 28px;
+  .hidden & {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+  @include tablet {
+    padding: 40px;
+    width: 523px;
+    top:50%;
+    left:50%;
+   
+    transform: translate(-50%, -50%);
+  }
+  
+  @include desktop{
+    width: 580px;
+  }
+}
 .call-us__container {
   position: absolute;
   top: 50%;
@@ -47,20 +75,19 @@
 
 .close-btn {
   position: absolute;
-  border-radius: 50%;
-  background-color: $color-white;
+  // border-radius: 50%;
+  // background-color: $light-color;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  top: 8px;
-  right: 8px;
-  width: 48px;
-  height: 48px;
+  top: 20px;
+  right: 20px;
+  
 
   svg {
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
   }
 
   @include laptop {
@@ -83,12 +110,12 @@
 
   h2 {
     @include section-title;
-    color: $color-grey;
+    color: $secondary-dark-color;
   }
 
   p {
-    @include text-style-txt;
-    color: $color-grey;
+    @include general-text;
+    color: $secondary-dark-color;
 
     @include tablet {
       width: 324px;
@@ -112,6 +139,7 @@
 }
 
 .form {
+
   @include tablet {}
 
   @include laptop {}
@@ -122,75 +150,90 @@
 .inputs-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   width: 100%;
 
   @include tablet {
-    gap: 24px;
-    flex-direction: row;
-    margin-bottom: 56px;
+
   }
 
   @include laptop {
-    gap: 100px;
-    margin-bottom: 40px;
+  
   }
 
   @include desktop {
-    gap: 120px;
+    gap: 20px;
   }
 }
 
 .input-title {
-  @include text-style-date;
-  color: $color-grey;
-  margin-bottom: 8px;
+  @include  tiny-text;
+  color: $dark-color;
+  text-transform: uppercase;
+  
 
   @include tablet {}
 
   @include laptop {
-    margin-bottom: 20px;
+   
   }
 
   @include desktop {}
 }
-
+.form-field{
+  position: relative;
+}
+.input-message {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: red;
+}
 .form-field__input {
-  width: 300px;
-  padding: 16px;
-  background-color: $color-white;
-  border: none;
+  width: 100%;
+  padding: 13px 20px;
+  background-color: $light-color;
+  
+  border-radius: 6px;
+  color: $dark-color;
 
-  color: $color-grey;
-  @include text-style-btn;
+  @include descr-text;
 
   &::placeholder {
-    @include text-style-btn;
-    color: $color-grey;
+    @include small-descr-text;
+    color: $color-gray;
   }
+ &:focus {
+  border-color: $dark-color;
 
+ }
   @include tablet {
-    width: 324px;
-    padding: 20px;
+    
+    padding: 13px  20px;
   }
 
   @include laptop {
-    width: 500px;
+    
   }
 
   @include desktop {
-    width: 600px;
+    padding: 13px 20px;
   }
 }
+.text-input{
+  resize: none;
 
+}
 .form__button {
   justify-self: flex-end;
 
-  @extend .general-btn;
+ 
   width: fit-content;
 
   &:hover .submit-btn__text {
-    color: $color-grey;
+    color: $secondary-dark-color;
     position: relative;
     z-index: 1;
   }
@@ -205,42 +248,22 @@
 }
 
 .form__button-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  margin-top: 20px;
 
   @include tablet {
-    flex-direction: row;
-    justify-content: space-between;
+    
   }
 
   @include laptop {}
 
   @include desktop {}
 
-  .form__disclaimer {
-    @include text-style-helpfull;
-    color: #7a7a7a;
-
-    @include tablet {
-      width: 70%;
-    }
-
-    @include laptop {
-      width: 500px;
-    }
-
-    @include desktop {
-      width: 600px;
-      font-size: 14;
-    }
-  }
+ 
 }
 
 .submit-btn__text {
   @include laptop {
-    max-width: 300px;
-    text-align: end;
+    
   }
 }
 
@@ -256,9 +279,8 @@
 }
 
 .input-message {
-  @include text-style-minor;
-  margin-bottom: 10px;
-  margin-top: 5px;
+  @include tiny-text;
+  
 }
 
 .footer .iti--allow-dropdown input {
@@ -278,9 +300,7 @@
   height: auto;
 }
 
-.iti {
-  width: auto;
-}
+
 
 .iti__mobile {
   .iti__country-list {

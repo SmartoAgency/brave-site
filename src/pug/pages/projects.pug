@@ -1,0 +1,102 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'projects'
+    var id_page = 'id-page-projects'
+    var class_page = 'class-page-projects'
+    var headerCustomClass = 'type2' 
+    var breadcrumbsSubitem = [
+      
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/footer.bundle.js')
+  script(defer src='./assets/scripts/projects.bundle.js')
+block content
+  section.projects-page.page-padding
+    .container 
+      h2.section-title  Наші проекти
+      include ../includes/breadcrumbs.pug
+      .projects-page__hero
+        .projects-page__img-wrap 
+          img(src="./assets/images/projects/projects-hero.jpg", alt="buildings")
+        .projects-page__info-wrap
+          .projects-page__info-logo 
+            +svg("logo-symbol")
+          h3.projects-page__info-title Реалізовано 30 житлових об'єктів
+          .line 
+          p Різні за масштабами і функціями, за змістом і характером, але завжди з продуманою архітектурою і повноцінним середовищем для комфортного життя.
+  section.container.projects-content
+    .projects__tool-bar 
+      .projects__filter 
+        button.projects__filter-btn Будуються
+        button.projects__filter-btn Здані
+        button.projects__filter-btn.active Всі об`єкти
+    .projects__list 
+      .project-card 
+        .project__img-wrap
+          img(src="./assets/images/projects/project1.jpg", alt="project").project__img
+          .project__ready Об`єкт здано
+          .project__right-top-wrap 
+            .project__postpayment Розтермінування 25 міс.
+            .project__credit Доступно в кредит
+            .project__partners Спільно з партнерами
+          .project__jeoselia 
+            +svg("oselia")
+        .project__title-loc-wrap
+          h3.project__title O.Krasa
+          a.project__location(href="/")
+            +svg("location")
+            p Гостомельське шосе, 49, Ірпінь, Київська обл.
+        ul.project__info-list 
+          li.project__info-item 
+            h4.project__info-label Квартири:
+            p.project__info-value 1157
+          li.project__info-item
+            h4.project__info-label Ціна:
+            p.project__info-value від 150 тис. $
+          li.project__info-item
+            h4.project__info-label Здача:
+            p.project__info-value IV кв 2025     
+      .project-card 
+        .project__img-wrap
+          img(src="./assets/images/projects/project1.jpg", alt="project").project__img
+          .project__ready Об`єкт здано
+          .project__right-top-wrap 
+            .project__postpayment Розтермінування 25 міс.
+            .project__credit Доступно в кредит
+            .project__partners Спільно з партнерами
+          .project__jeoselia 
+            +svg("oselia")
+        .project__title-loc-wrap
+          h3.project__title O.Krasa
+          a.project__location(href="/")
+            +svg("location")
+            p Гостомельське шосе, 49, Ірпінь, Київська обл.
+        ul.project__info-list 
+          li.project__info-item 
+            h4.project__info-label Квартири:
+            p.project__info-value 1157
+          li.project__info-item
+            h4.project__info-label Ціна:
+            p.project__info-value від 150 тис. $
+          li.project__info-item
+            h4.project__info-label Здача:
+            p.project__info-value IV кв 2025 
+    .projects__btn-wrap
+      button(type="button" data-more-projects).general-button ПОКАЗАТИ Більше 
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

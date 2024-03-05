@@ -1,0 +1,145 @@
+.page-padding {
+  padding-top: 100px;
+  @include tablet {
+    padding-top: 140px;
+  }
+  @include desktop {
+    padding-top: 160px;
+  }
+}
+.projects-page {
+  margin-bottom: 20px;
+@include tablet { margin-bottom: 60px;}
+  .section-title {
+    margin-bottom: 12px;
+    @include desktop {
+      margin-bottom: 20px;
+    }
+  }
+  .breadcrumbs {margin-bottom: 70px;
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include desktop {
+      margin-bottom: 60px;
+    }
+  }
+  &__hero {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+  }
+  &__img-wrap {
+    display: none;
+    @include tablet {
+      display: block;
+      flex: 1;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    @include laptop {
+      flex: auto;
+      height: 340px;
+      align-self: stretch;
+    }
+    @include desktop {
+      height: auto;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__info-wrap {
+    padding: 60px 12px 40px 12px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $dark-color;
+    border-radius: 20px;
+    position: relative;
+    gap: 12px;
+
+    @include tablet {
+      padding: 40px 12px;
+      flex: 1;
+      height: 340px;
+    }
+    @include laptop {
+      padding: 40px 20px;
+      width: 415px;
+      height: 340px;
+      flex: auto;
+    }
+    @include desktop {
+      padding: 40px;
+      width: 550px;
+      height: 400px;
+      gap: 20px;
+    }
+    p {
+      @include descr-text;
+      color: $secondary-dark-color;
+      text-align: center;
+    }
+  }
+
+  &__info-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $dark-color;
+    border-radius: 50%;
+    background-color: $bg-color;
+    width: 90px;
+height: 90px;
+@include desktop{
+    width: 110px;
+    height: 110px;
+  }
+  }
+
+  &__info-title {
+    @include block-title;
+    text-align: center;
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(10, 13, 24, 0) 0%,
+      #0a0d18 50.52%,
+      rgba(10, 13, 24, 0) 100%
+    );
+  }
+}
+.projects-content {
+  padding-bottom: 80px;
+  @include tablet {
+    padding-bottom: 150px;
+  }
+  .projects__tool-bar {
+    justify-content: center;
+  }
+}
+.projects__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-bottom: 20px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}

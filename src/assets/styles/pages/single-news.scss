@@ -1,0 +1,141 @@
+.container--single-news {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  @include tablet {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @include laptop {
+    padding-left: 150px;
+  padding-right: 150px;
+  }
+  @include desktop {
+    padding-left: 288px;
+    padding-right: 288px;
+  }
+}
+
+.single-news {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  @include tablet {
+    padding-top: 140px;
+  padding-bottom: 100px;
+  }
+  
+  @include desktop {
+    padding-top: 160px;
+    padding-bottom: 100px;
+  }
+  .breadcrumbs {
+    margin-bottom: 20px;
+  }
+  .news-card__header{
+    margin-bottom: 20px;
+  }
+  &__btn-back {
+    display:none;
+    @include laptop {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 12px;
+    
+    span {
+      @include small-descr-text;
+    }}
+    @include desktop{
+    left: 60px;
+    flex-direction: row;}
+  }
+  .news-card__header {
+    position: static;
+    padding: 0;
+    .news-card__type{
+      padding:8px 16px;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+  }
+  &__svg-wrap {
+    width: 42px;
+    height: 42px;
+    border: 1px solid $dark-color;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      width: 11px;
+    height: 11px;
+    }
+  }
+
+  &__title{
+    width:100%;
+    text-align: center;
+    @include block-title;
+    margin-bottom: 20px;
+  }
+
+  .news-card__type{
+    order:2;
+  }
+  &__content-wrap {
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    @include tablet {
+      gap:40px;
+    }
+    @include desktop {
+      gap:60px;
+    }
+  }
+&__subtitle{
+  @include general-text;
+
+}
+
+&__text{
+  @include descr-text;
+
+}
+
+&__img{
+  width:100%;
+  
+}
+&__video {
+  width:100%;
+  height:calc((100vw - 40px) / 2 );
+
+  @include tablet{height:calc((100vw - 48px) / 2 );
+  }
+  @include laptop {
+    height:calc((100vw - 300px) / 2 );
+  }
+  @include desktop {
+    height:calc((100vw - 560px) / 2 );
+  }
+  
+}
+&__container--last {
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+  padding-bottom:80px ;
+  @include tablet {
+    padding-bottom:150px ;
+  }
+  @include desktop {
+    gap:40px;
+    padding-bottom:100px ;
+  }
+} 
+}

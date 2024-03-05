@@ -1,0 +1,156 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'single-property'
+    var id_page = 'id-page-single-property'
+    var class_page = 'class-page-single-property'
+    var headerCustomClass = 'type2' 
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/footer.bundle.js')
+  script(defer src='./assets/scripts/singleNews.bundle.js')
+block content
+  section.single-property.container 
+    h2.section-title 3-кімнатна квартира 
+    include ../includes/breadcrumbs.pug 
+    .single-property__info-wrap 
+      .single-property__info-block.single-property__info-block--general
+        .single-property__text-part
+          h3.single-property__block-title ЖК River Port
+          table
+            tbody 
+              tr 
+                th Площа:
+                td 47,63 м² 
+              tr 
+                th Адреса:
+                td Гостомельське шосе, 49, Ірпінь, Київська обл.
+              tr 
+                th Вартість:
+                td від 150 тис. $ 
+              tr 
+                th Клас будівлі:
+                td бізнес-клас
+              tr 
+                th Кількість будинків:
+                td 3
+          button.general-button ЗВОРОТНІЙ ДЗВІНОК
+        .single-property__img-part
+          img(src="./assets/images/projects/interier.jpg", alt="planning")
+      .single-property__info-block 
+        h3.single-property__block-title Характеристики
+        .single-property__main-params
+          .row
+            h4 Житлова площа:
+            p 51.12 м² 
+          .row
+            h4  Загальна площа:
+            p 70.34 м² 
+        table
+          //- tbody.accent
+          //-   tr
+          //-     th Житлова площа:
+          //-     td 51.12 м² 
+          //-   tr
+          //-     th Загальна площа:
+          //-     td 70.34 м² 
+          tbody
+            tr 
+              th Кухня:
+              td 11.34 м² 
+            tr 
+              th Передпокій:
+              td 7.34 м² 
+            tr 
+              th Ванна кімната:
+              td 5.34 м² 
+            tr 
+              th Санвузол:
+              td 1.40 м² 
+            tr 
+              th Балкон:
+              td 1.66 м² 
+    .single-property__info-wrap
+      .single-property__info-block
+        h3.single-property__block-title План поверху 
+        .single-property__plan-wrap
+          img(src="./assets/images/projects/flat-plan.jpg", alt="")
+      .single-property__info-block 
+        h3.single-property__block-title Комплектація
+        table
+          tbody 
+            tr
+              th Опалення:
+              td централізоване (індивідуальне на комплекс)
+            tr
+              th К-сть поверхів:
+              td 16
+            tr 
+              th К-ть ліфтів:
+              td 2 на під'їзд: пасажирський та вантажний, безшумні, швидкісні ліфти від провідних європейських виробників
+            tr 
+              th Внутрішнє наповнення:
+              td часткове оздоблення квартир, а також індивідуальні побажання для клієнтів
+            tr 
+              th Технологія будівництва:
+              td монолітно-каркасна
+            tr 
+              th Стіни:
+              td наповнення Газоблок
+            tr 
+              th Утеплення:
+              td мінеральна вата (100 мл)
+            tr 
+              th Фасад:
+              td декоративна штукатурка
+            tr 
+              th Вікна:
+              td двокмерний склопакет, п'ятикамерний профіль
+  section.single-property__other.container 
+    h2.single-property__block-title Переглянути інші планування
+    .property__container 
+      .property-card 
+        .property-card__img-wrap 
+          img.property-card__img(src="./assets/images/projects/project1.jpg", alt="")
+          a.property-card__location(href="/")
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect width="24" height="24" rx="6" fill="#77B551"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6C9.87878 6 8 7.24528 8 9.62264C8 10.1208 8.28283 10.8491 8.42424 11.1509L12 18V11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39545 10.8954 7.50003 12 7.5V6ZM12 11.5C12 11.5 12 11.5 12 11.5C13.1046 11.5 14 10.6046 14 9.5C14 8.39543 13.1046 7.5 12 7.5C12 7.5 12 7.5 12 7.5V6C14.1212 6 16 7.24528 16 9.62264C16 10.1208 15.7172 10.8491 15.5757 11.1509L12 18V11.5Z" fill="#F2F5F8"/>
+            </svg>
+            span м.Ірпінь
+          h3.property-card__project-title жк River Port
+        .property-card__info-wrap 
+          .property-card__info-img-wrap  
+            img(src="./assets/images/projects/interier.jpg", alt="")
+          .property-card__info-text
+            h4.property-card__info-title 3-кімнатна квартира
+            ul.property-card__info-list
+              li.property-card__info-item 
+                p Загальна площа:
+                  span 88,08
+                  | м²
+              li.property-card__info-item 
+                p Житлова площа:
+                  span 88,08
+                  | м²
+            a(href="").general-button ДИВИТИСЯ ПЛАНУВАННЯ
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

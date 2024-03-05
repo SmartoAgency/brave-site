@@ -1,0 +1,24 @@
+.breadcrumbs {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+ margin-bottom: 40px;
+ @include tablet {
+  margin-bottom: 50px;
+ }
+ @include desktop {
+  margin-bottom: 60px;
+ }
+}
+.breadcrumbs-item{
+  @include small-descr-text;
+  color: $dark-color;
+white-space: nowrap;
+  a {
+    margin-right: 12px;
+  }
+  &__current--color {
+    color: $color-gray;
+  }
+}
