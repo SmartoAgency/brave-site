@@ -37,9 +37,9 @@ block content
   section.container.projects-content
     .projects__tool-bar 
       .projects__filter 
-        button.projects__filter-btn Будуються
-        button.projects__filter-btn Здані
-        button.projects__filter-btn.active Всі об`єкти
+        button.projects__filter-btn(data-projects-type-button="build") Будуються
+        button.projects__filter-btn(data-projects-type-button="done") Здані
+        button.projects__filter-btn.active(data-projects-type-button="all") Всі об`єкти
     .projects__list 
       .project-card 
         .project__img-wrap

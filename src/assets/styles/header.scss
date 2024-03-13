@@ -139,6 +139,32 @@
 .nav__link {
   @include descr-text;
   text-transform: uppercase;
+  @include laptop {
+    
+    transition: all 0.20s ease-in;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    span{
+      display: inline-block;
+      transition: .2s linear;
+    }
+    &::after{
+      content: attr(data-text);
+      position: absolute;
+      bottom:105%;
+      left:0;
+      white-space: nowrap;
+      transition: .2s linear;
+      color: $accent-color;
+
+    }
+    &:hover {
+     &::after, span {
+      transform:translateY(105%) ;
+     }
+    }
+  }
 }
 
 .header__tools-block {
@@ -343,7 +369,13 @@
   justify-content: center;
   align-items: center;
   background: $accent-gradient;
+  transition: all 0.25s ease-in-out ;
   &:hover {
+    border-color: $accent-color;
+    background: $accent-gradient;
+    &>svg path {
+      fill:$light-color;
+    }
     .nav-popup {
       opacity: 1;
       max-height: 300px;
@@ -444,6 +476,7 @@
     @include tablet{
       font-size: 30px;
     }
+   
   }
 
  
@@ -499,4 +532,47 @@
   @include desktop {
     display: flex;
   }
+}
+
+.link-hover{
+  position:relative;
+  width: fit-content;
+
+  &:hover {
+    &::before {
+      transform: scaleX(1) translateX(0);
+    }
+  }
+  &::before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    display: block;
+    height:1px;
+    width:100%;
+    top:100%;
+    left:0;
+
+    transform: scaleX(0) translateX(-50%);
+    background-color: $dark-color;
+    transition:transform 0.2s ease-in-out;
+  }
+
+}
+.link-hover--light {
+  @extend .link-hover;
+  &::before {
+    background-color: $light-color;
+}}
+
+.loading {
+    filter:blur(5px)
+  }
+
+.no-result {
+  @include block-title;
+  padding: 40px;
+  text-align: center;
+  width:100%;
+
 }

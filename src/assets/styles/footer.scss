@@ -42,7 +42,7 @@
   column-gap: 20px;
 
   @include tablet {
-    max-height: 140px;
+    max-height: 160px;
     column-gap: 20px;
   }
   @include laptop {
@@ -56,13 +56,33 @@
 
   @include general-text;
   color: $light-color;
-  transition: transform 0.25s ease-in, box-shadow 0.25s ease-in, opacity 0.25s ease-in-out ;
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 7px 10px -2px $accent-color;
-    opacity: 0.8;
-  }
-}
+  
+  @include laptop {
+    
+    transition: all 0.20s ease-in;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    span{
+      display: inline-block;
+      transition: .2s linear;
+    }
+    &::after{
+      content: attr(data-text);
+      position: absolute;
+      bottom:105%;
+      left:0;
+      white-space: nowrap;
+      transition: .2s linear;
+      color: $accent-color;
+
+    }
+    &:hover {
+     &::after, span {
+      transform:translateY(105%) ;
+     }
+    }
+  }}
 &__contact-item {
   @include general-text;
   color: $light-color;

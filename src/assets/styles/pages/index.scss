@@ -155,9 +155,6 @@
   }
 }
 
-
-
-
 .secondary-btn {
   @include small-descr-text;
   position: relative;
@@ -166,28 +163,26 @@
   border: 1px solid $dark-color;
   padding: 10px 20px;
   text-transform: uppercase;
-  transition:  color 0.3s ease-in-out , border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     left: -15%;
     top: 0;
-    width:130%;
-    height:100%;
+    width: 130%;
+    height: 100%;
     transform: skewX(45deg) scale(0, 1);
     background: $accent-gradient;
     transition: transform 0.3s ease-in-out;
   }
-  &:hover{
+  &:hover {
     color: $light-color;
     border-color: $accent-color;
     &::after {
       transform: skewX(45deg) scale(1, 1);
     }
   }
-  
-    
 }
 
 .projects {
@@ -239,9 +234,10 @@
 .projects__pagination {
   display: none;
   @include tablet {
-    display: block;
+    display: flex;
     @include descr-text;
     color: $dark-color;
+    gap:4px;
   }
 }
 
@@ -255,7 +251,14 @@
     @include descr-text;
     color: $dark-color;
     position: relative;
-
+    @include laptop {
+      &:hover {
+        &::before {
+          opacity: 1;
+          background: $accent-gradient;
+        }
+      }
+    }
     &.active {
       &::before {
         opacity: 1;
@@ -273,6 +276,7 @@
       bottom: -18px;
       left: 0;
       opacity: 0;
+      transition: opacity 0.2s linear;
     }
   }
 }
@@ -311,20 +315,21 @@
     svg path {
       transition: stroke 0.25s ease-in-out;
     }
-    
-      &:hover {button{
+
+    &:hover {
+      button {
         transform: scale(1);
         background: $accent-gradient;
         svg path {
           stroke: $light-color;
         }
-      }}
-    
+      }
+    }
   }
 }
 .project-card {
   padding: 12px;
-
+  width: 100%;
   background: transparent;
   display: flex;
   flex-direction: column;
@@ -332,8 +337,17 @@
   border-radius: 20px;
   border: 1px solid $dark-color;
   box-shadow: 0px 60px 60px 0px #d0d4da;
+  &:hover {
+    .project__img {
+      transform: scale(1.1);
+    }
+  }
+  @include tablet {
+    width: calc(50% - 10px);
+  }
   @include laptop {
     padding-bottom: 20px;
+    width: calc((100% - 60px) / 4);
   }
   @include desktop {
     padding: 20px;
@@ -362,6 +376,7 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+    transition: transform .4s ease-in-out;
   }
 
   &__ready {
@@ -536,12 +551,10 @@
     flex-wrap: wrap;
     gap: 12px;
     @include tablet {
+      flex-direction: row;
       gap: 20px;
     }
 
-    @include laptop {
-      flex-direction: row;
-    }
     @include desktop {
       gap: 40px;
     }
@@ -701,6 +714,11 @@
   border: 1px solid $dark-color;
   border-radius: 20px;
   position: relative;
+  &:hover {
+    img{
+      transform: scale(1.1);
+    }
+  }
   @include tablet {
     flex-direction: row;
   }
@@ -718,6 +736,15 @@
     object-position: center;
     height: 200px;
     border-radius: 16px;
+    overflow: hidden;
+    img{
+      object-fit: cover;
+    object-position: center;
+    width:100%;
+    height:100%;
+    transition: transform .3s ease-in-out;
+
+    }
     @include tablet {
       width: calc(50% - 10px);
       height: 376px;
@@ -733,7 +760,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    flex:1;
+    flex: 1;
     @include desktop {
       gap: 20px;
     }
@@ -929,7 +956,7 @@
       margin-bottom: 4px;
     }
   }
-  
+
   &__title {
     @include general-text;
   }
@@ -946,11 +973,11 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    .general-button{
-      width:100%;
+    .general-button {
+      width: 100%;
       text-align: center;
       @include tablet {
-        width:fit-content;
+        width: fit-content;
       }
     }
     @include desktop {
@@ -980,5 +1007,22 @@
     @include small-descr-text;
     color: $secondary-dark-color;
     margin-bottom: 20px;
+  }
+}
+.real-estate__select-wrap {
+  .irs {
+    .irs-bar {
+      background: linear-gradient(to bottom, #B45805 -6.57%, #E38101 30.42%, #FBF157 102.41%);
+      height: 8px;
+      border: none;
+    }
+    .irs-line {
+      height: 8px;
+      border: none;
+    }
+    .irs-handle {
+      width:25px;
+      height:25px;
+    }
   }
 }

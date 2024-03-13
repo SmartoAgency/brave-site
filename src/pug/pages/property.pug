@@ -24,9 +24,8 @@ block content
   section.property.page-padding.container
     h2.section-title Нерухомість
     include ../includes/breadcrumbs.pug
-    form.real-estate__form
-      .filter__label фільтр
-      .select.real-estate__select-wrap
+    form.property__form
+      .select.real-estate__select-wrap(data-value="all" data-name="project")
         label(for="select3").real-estate__label Проект
         .select__header
           span.select__current Усі проекти
@@ -34,23 +33,23 @@ block content
             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17157 7.99256L2.58203 9.41052L10.5398 17.4105L11.9503 18.8285L13.3682 17.418L17.3894 13.418L21.4105 9.41798L22.8284 8.0075L20.0074 5.17163L18.5895 6.58212L14.5684 10.5821L11.9652 13.1716L5.41794 6.58958L4.00747 5.17163L1.17157 7.99256Z" fill="#0A0D18"/>
           </svg>
         .select__body(tabindex="0")
-          .select__item Value 1
-          .select__item Value 2
-          .select__item Value 3
-          .select__item Value 4
-          .select__item Value 5 
-          .select__item Value 1
-          .select__item Value 2
-          .select__item Value 3
-          .select__item Value 4
-          .select__item Value 5 
-          .select__item Value 1
-          .select__item Value 2
-          .select__item Value 3
-          .select__item Value 4
-          .select__item Value 5 
+          .select__item(data-project="111") Value 1
+          .select__item(data-project="112") Value 2
+          .select__item(data-project="113") Value 3
+          .select__item(data-project="114") Value 4
+          .select__item(data-project="115") Value 5 
+          .select__item(data-project="116") Value 1
+          .select__item(data-project="117") Value 2
+          .select__item(data-project="118") Value 3
+          .select__item(data-project="119") Value 4
+          .select__item(data-project="120") Value 5 
+          .select__item(data-project="121") Value 1
+          .select__item(data-project="122") Value 2
+          .select__item(data-project="123") Value 3
+          .select__item(data-project="124") Value 4
+          .select__item(data-project="125") Value 5 
 
-      .select.real-estate__select-wrap
+      .select.real-estate__select-wrap(data-value="all" data-name="appart")
         label(for="select3").real-estate__label Тип квартири
         .select__header
           span.select__current Value 1
@@ -58,17 +57,17 @@ block content
             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17157 7.99256L2.58203 9.41052L10.5398 17.4105L11.9503 18.8285L13.3682 17.418L17.3894 13.418L21.4105 9.41798L22.8284 8.0075L20.0074 5.17163L18.5895 6.58212L14.5684 10.5821L11.9652 13.1716L5.41794 6.58958L4.00747 5.17163L1.17157 7.99256Z" fill="#0A0D18"/>
           </svg>
         .select__body
-          .select__item Value 1
-          .select__item Value 2
-          .select__item Value 3
-          .select__item Value 4
-          .select__item Value 5  
+          .select__item(data-appart="11") Value 1
+          .select__item(data-appart="12") Value 2
+          .select__item(data-appart="13") Value 3
+          .select__item(data-appart="14") Value 4
+          .select__item(data-appart="15") Value 5  
 
-      .real-estate__select-wrap
+      .real-estate__select-wrap(data-name="area")
         label(for="range").real-estate__label Площа, м² 
         input(type="range" id="doubleRange" name="doubleRange" min="0" max="100" step="1").real-estate__range
 
-      .select.real-estate__select-wrap
+      .select.real-estate__select-wrap(data-value="all" data-name="city")
         label(for="select3").real-estate__label Місто
         .select__header
           span.select__current Value 1
@@ -76,13 +75,13 @@ block content
             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17157 7.99256L2.58203 9.41052L10.5398 17.4105L11.9503 18.8285L13.3682 17.418L17.3894 13.418L21.4105 9.41798L22.8284 8.0075L20.0074 5.17163L18.5895 6.58212L14.5684 10.5821L11.9652 13.1716L5.41794 6.58958L4.00747 5.17163L1.17157 7.99256Z" fill="#0A0D18"/>
           </svg>
         .select__body
-          .select__item Value 1
-          .select__item Value 2
-          .select__item Value 3
-          .select__item Value 4
-          .select__item Value 5    
+          .select__item(data-city="1") Value 1
+          .select__item(data-city="2") Value 2
+          .select__item(data-city="3") Value 3
+          .select__item(data-city="4") Value 4
+          .select__item(data-city="5") Value 5    
       .projects__btn-wrap  
-        button.real-estate__btn(type="submit" value="Надіслати") ШУКАТИ ПЛАНУВАННЯ
+        button.real-estate__btn(type="submit" data-find-prperty) ШУКАТИ ПЛАНУВАННЯ
     .property__container 
       .property-card 
         .property-card__img-wrap 
@@ -110,7 +109,7 @@ block content
                   | м²
             a(href="").general-button ДИВИТИСЯ ПЛАНУВАННЯ
     .projects__btn-wrap
-      button(type="button" data-more-projects).general-button ПОКАЗАТИ Більше 
+      button(type="button" data-more-property).general-button ПОКАЗАТИ Більше 
 
 block footer
   include ../includes/footer.pug

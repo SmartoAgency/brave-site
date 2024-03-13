@@ -120,16 +120,22 @@ header(class="header "+headerCustomClass)
             <path d="M12.5 6.98506L10.25 9.48506L8 11.9851L3.5 6.98506" stroke="#0A0D18" stroke-width="1.5" stroke-linecap="square"/>
           </svg>
           .nav-popup 
-            a(href="/about").nav__link ПРО КОМПАНІЮ
-            a(href="/social-projects").nav__link СОЦІАЛЬНІ ПРОЕКТИ
+            a(href="/about" data-text="ПРО КОМПАНІЮ").nav__link 
+              span ПРО КОМПАНІЮ
+            a(href="/social-projects" data-text="СОЦІАЛЬНІ ПРОЕКТИ").nav__link 
+              span СОЦІАЛЬНІ ПРОЕКТИ
         li.nav__item 
-          a(href="/projects").nav__link ПРОЕКТИ
+          a(href="/projects" data-text="ПРОЕКТИ").nav__link 
+            span ПРОЕКТИ
         li.nav__item 
-          a(href="/property").nav__link НЕРУХОМІСТЬ
+          a(href="/property" data-text="НЕРУХОМІСТЬ").nav__link 
+            span НЕРУХОМІСТЬ
         li.nav__item 
-          a(href="/news").nav__link НОВИНИ ТА АКЦІЇ
+          a(href="/news" data-text="НОВИНИ ТА АКЦІЇ").nav__link 
+            span НОВИНИ ТА АКЦІЇ
         li.nav__item 
-          a(href="/contacts").nav__link КОНТАКТИ
+          a(href="/contacts" data-text="КОНТАКТИ").nav__link 
+            span КОНТАКТИ
     .header__tools-block
       .language__wrap    
         ul.language__list 
@@ -161,9 +167,9 @@ header(class="header "+headerCustomClass)
                 </svg>
           label.contact-block__label ТЕЛЕФОНИ::
           .contact-block__phones
-            a(href="tel:+380968880782").contact-block__text +380 (96) 888 07 82
-            a(href="tel:+380638880782").contact-block__text +380 (63) 888 07 82
-            a(href="tel:+380508880782").contact-block__text +380 (50) 888 07 82
+            a(href="tel:+380968880782").contact-block__text.link-hover +380 (96) 888 07 82
+            a(href="tel:+380638880782").contact-block__text.link-hover +380 (63) 888 07 82
+            a(href="tel:+380508880782").contact-block__text.link-hover +380 (50) 888 07 82
           button.general-button.call-back.mobile-mode(data-call-us-btn type="button") ЗВОРОТНІЙ ДЗВІНОК
       .contact-phone
         a(href="tel:+380968880782") +380 (96) 888 07 82
