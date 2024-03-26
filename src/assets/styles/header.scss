@@ -206,7 +206,9 @@
   color: $dark-color;
   border-radius: 6px;
   transition: color 0.25s ease-in-out;
-
+  &.active  {
+    pointer-events: none;
+  }
   a {
     display: block;
     padding: 10px;

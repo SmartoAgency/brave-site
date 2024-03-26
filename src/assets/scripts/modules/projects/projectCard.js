@@ -5,7 +5,7 @@ export function projectCard({ card,img,title, url} = {}) {
     <a href="${url}" class="swiper-slide project-card">
         <div class="project__img-wrap">
         <img class="project__img" src="${img}" alt="project">
-            <div class="project__ready">Об'єкт здано</div>
+           ${type==="done"?`<div class="project__ready">Об'єкт здано</div>`:`<div class="project__ready">Об'єкт будується</div>`} 
             <div class="project__right-top-wrap">
                 ${credit_month?`<div class="project__postpayment">Розтермінування ${credit_month} міс.</div>`:''}
                 ${credit?`<div class="project__credit">Доступно в кредит</div>`:''}

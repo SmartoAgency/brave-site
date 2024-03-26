@@ -3,7 +3,9 @@ import { gsap, ScrollTrigger, CustomEase } from 'gsap/all';
 import { useState } from '../modules/helpers/helpers.js';
 import { newsCard } from '../modules/news/newsCard';
 import requestData from '../modules/api.js';
+import { initSmoothScrolling } from '../modules/scroll/leniscroll';
 
+initSmoothScrolling();
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const loadMoreBtn = document.querySelector('[data-more-news]');

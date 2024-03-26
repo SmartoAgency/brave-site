@@ -1,7 +1,7 @@
 
 export function newsCard({ date,img,pre_text,title,type,url} = {}) {
   return `
-  <a class="news-card" href="${url}"> 
+  <a class="news-card" href="${url}" data-type="${type}"> 
     <div class="news-card__img">
       <img src="${img}" alt="news">
     </div>

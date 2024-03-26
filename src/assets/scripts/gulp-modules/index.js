@@ -4,10 +4,11 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import { gsap, ScrollTrigger, CustomEase } from 'gsap/all';
 
-import { initSmoothScrolling } from '../modules/scroll/leniscroll';
+
 import '../modules/helpers/imgParallax';
 import "../modules/property/filter"
 
+import { initSmoothScrolling } from '../modules/scroll/leniscroll';
 
 initSmoothScrolling();
 gsap.registerPlugin(ScrollTrigger, CustomEase);

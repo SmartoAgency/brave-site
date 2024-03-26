@@ -1,5 +1,8 @@
 import Swiper,{Navigation} from "swiper"
 import 'swiper/css';
+import { initSmoothScrolling } from '../modules/scroll/leniscroll';
+
+initSmoothScrolling();
 const swiper = new Swiper ('.swiper-hero', {
   
   modules: [Navigation],

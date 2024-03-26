@@ -4,7 +4,9 @@ import { useState } from '../modules/helpers/helpers.js';
 
 import requestData from '../modules/api.js';
 import { projectCard } from '../modules/projects/projectCard.js';
+import { initSmoothScrolling } from '../modules/scroll/leniscroll';
 
+initSmoothScrolling();
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const loadMoreBtn = document.querySelector('[data-more-projects]');
