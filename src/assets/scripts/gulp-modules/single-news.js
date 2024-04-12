@@ -10,7 +10,7 @@ const swiper = new Swiper('.swiper-single-news', {
   speed: 1000,
   spaceBetween: 20,
   slidesPerView: 1,
-  autoHeight: true,
+  // autoHeight: true,
   navigation: {
     prevEl: '.swiper-news-button-prev',
     nextEl: '.swiper-news-button-next',

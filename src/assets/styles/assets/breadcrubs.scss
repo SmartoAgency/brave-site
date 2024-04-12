@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: center;
  margin-bottom: 40px;
+ 
+
  @include tablet {
   margin-bottom: 50px;
  }
@@ -15,6 +17,11 @@
   @include small-descr-text;
   color: $dark-color;
 white-space: nowrap;
+&:last-child{
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
   a {
     margin-right: 12px;
   }

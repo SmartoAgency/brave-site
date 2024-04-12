@@ -115,34 +115,73 @@ if(window.location.pathname.includes("property")){requestData("property", dataFo
 
 
 //Custom select START
-let select = function() {
+
+let selectItem = document.querySelectorAll('.select__item');
   let selectHeader = document.querySelectorAll('.select__header');
-  let selectItem = document.querySelectorAll('.select__item');
 
-  selectHeader.forEach(item => {
-    item.addEventListener('click', selectToggle);
-  });
+document.body.addEventListener("click", function (event) {
+  console.log(event)
+  const select = event.target.closest(".select__header");
+  if(select) {
+    if (select.parentElement.classList.contains("is-active")){
+      
+      select.parentElement.classList.remove("is-active"); 
+      return
+      }
+    selectHeader.forEach(item =>  item.parentElement.classList.remove("is-active"))
 
-  selectItem.forEach(item => {
-    item.addEventListener('click', selectChoose);
-  });
+    select.parentElement.classList.add("is-active")
 
-  function selectToggle() {
-    this.parentElement.classList.toggle('is-active');
+    
   }
+  else {
+    selectHeader.forEach(item =>  item.parentElement.classList.remove("is-active"))
+  }
+})
+selectItem.forEach(item => {
+  item.addEventListener('click', selectChoose);
+});
+function selectChoose() {
+  let text = this.innerText,
+    select = this.closest('.select'),
+    currentText = select.querySelector('.select__current');
+  let value = this.getAttribute(`data-${select.dataset.name}`);
+ 
+  select.dataset.value = value;
+  currentText.innerText = text;
+  select.classList.remove('is-active');
+}
 
-  function selectChoose() {
-    let text = this.innerText,
-      select = this.closest('.select'),
-      currentText = select.querySelector('.select__current');
-    let value = this.getAttribute(`data-${select.dataset.name}`);
+// let select = function() {
+//   let selectHeader = document.querySelectorAll('.select__header');
+//   let selectItem = document.querySelectorAll('.select__item');
+
+//   selectHeader.forEach(item => {
+//     item.addEventListener('click', selectToggle);
+//   });
+
+//   selectItem.forEach(item => {
+//     item.addEventListener('click', selectChoose);
+//   });
+
+//   function selectToggle() {
+//     this.parentElement.classList.toggle('is-active');
+//   }
+
+//   function selectChoose() {
+//     let text = this.innerText,
+//       select = this.closest('.select'),
+//       currentText = select.querySelector('.select__current');
+//     let value = this.getAttribute(`data-${select.dataset.name}`);
    
-    select.dataset.value = value;
-    currentText.innerText = text;
-    select.classList.remove('is-active');
-  }
-};
-select();
+//     select.dataset.value = value;
+//     currentText.innerText = text;
+//     select.classList.remove('is-active');
+//   }
+// };
+// select();
+
+
 
 const formMain = document.querySelector('.real-estate__form');
 

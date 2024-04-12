@@ -34,9 +34,11 @@
   transition: all 0.3s ease-in-out;
   position: relative;
   height: 60px;
-  
+  @include laptop {
+    height: 100px;
+  }
   @include desktop{
-  height: 80px;
+  height: 120px;
   }
 
   &::before {
@@ -53,6 +55,12 @@
     transition: transform 0.3s ease-in-out;
   }
   &.scroll-down {
+    @include laptop {
+      height:60px;
+    }
+    @include desktop{
+      height: 80px;
+      }
     &::before {
       transform: translateY(0%);
     }
@@ -81,7 +89,12 @@
     height: 55px;
   }
 }
-
+// .header__nav.laptop-mode {
+//   position: absolute;
+//   top:50%;
+//   left:50%;
+//   transform: translate(-50%,-50%);
+// }
 .nav__list {
   display: flex;
   justify-content: center;
@@ -156,7 +169,7 @@
       left:0;
       white-space: nowrap;
       transition: .2s linear;
-      color: $accent-color;
+      text-decoration: underline;
 
     }
     &:hover {
@@ -174,6 +187,13 @@
   @include tablet {
     gap: 20px;
   }
+  @include laptop {
+    gap: 12px;
+  }
+  @include desktop {
+    gap: 20px;
+  }
+
 }
 .language__wrap {
   width: 42px;
@@ -577,4 +597,9 @@
   text-align: center;
   width:100%;
 
+}
+.class-page-single-projects {
+  .header-bg {
+    background: linear-gradient(rgba(242, 245, 248, 0.9), rgba(255, 255, 255, 0) 100% );
+  }
 }

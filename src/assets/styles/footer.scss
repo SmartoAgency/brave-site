@@ -6,6 +6,13 @@
   @include tablet {
     padding-top: 60px;
   }
+  .mobile-width{
+    display: block;
+    max-width: 80%;
+    @include tablet {
+      max-width: none;
+    }
+  }
 
 &__content-wrapper {
   display: flex;
@@ -19,6 +26,7 @@
   }
   @include laptop {
     flex-direction: row;
+    gap:0;
   }
   @include desktop {
     padding-bottom: 200px;
@@ -74,7 +82,7 @@
       left:0;
       white-space: nowrap;
       transition: .2s linear;
-      color: $accent-color;
+      text-decoration: underline;
 
     }
     &:hover {
@@ -98,10 +106,10 @@
   display: flex;
   right: 20px;
   border-color: rgba(242, 245, 248, 0.50);
-  padding: 10px;
+  padding: 12px;
   svg {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
 
   @include tablet {
@@ -123,7 +131,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap:8px;
   padding-bottom: 28px;
     @include tablet {
@@ -159,14 +167,15 @@
 .footer__license {
   @include small-descr-text;
   color: $color-gray;
+     max-width: 200px;
   
 
   @include tablet {
-    max-width: 200px;
+    
   }
 
   @include laptop {
-    max-width: auto;
+    max-width: none;
   }
 }
 

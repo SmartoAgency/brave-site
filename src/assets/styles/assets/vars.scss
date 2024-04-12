@@ -18,7 +18,7 @@ $color-green: rgba(119,181,81,1);
 $secondary-dark-color: #3e4252;
 $dark-color: #0b0e19;
 $accent-gradient:  linear-gradient(88deg, #B45805 -6.57%, #E38101 70.42%, #FBF157 172.41%);
-$btn-gradient: linear-gradient(75deg, #B45805 -6.57%, #E38101 30.42%, #FBF157 50.41% ,#E38101 70.42%,#B45805 106%);
+$btn-gradient: linear-gradient(75deg, #B45805 -6.57%, #E38101 30.42%, rgb(251, 199, 87) 50.41%,#E38101 70.42%,#B45805 106%);
 $accent-color: rgba(233,158,23,1);
 @mixin section-title () {
 	font-size: 36px;

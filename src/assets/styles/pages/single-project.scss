@@ -43,7 +43,7 @@
     button {
       transform: scale(1.2) translateX(20%);
       border-color: $accent-color;
-      box-shadow: 0px 0px 7px 1px $accent-color;
+      
     }
   }
   button {
@@ -54,8 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.25s ease-in-out, border-color 0.25s ease-in-out,
-      box-shadow 0.25s ease-in-out 0.1s;
+    transition: transform 0.25s ease-in-out, border-color 0.25s ease-in-out;
   }
 }
 .swiper-button-next {
@@ -348,6 +347,7 @@
     & > svg {
       width: 54px;
       height: 54px;
+      min-width: fit-content;
     }
   }
   &__block--include {
@@ -501,7 +501,7 @@ grid-template-rows: repeat(3, 1fr);
     }
     @include tablet {
       grid-area: 1 / 1 / 3 / 3;
-    
+      height:100vh;
     
     }
     @include laptop {
@@ -516,7 +516,7 @@ grid-template-rows: repeat(3, 1fr);
     @include tablet {
       display: block;
       grid-area: 3 / 1 / 4 / 2;
- 
+      height: calc(50vh - 10px);
     img {
       width: 100%;
       height: 100%;
@@ -534,6 +534,7 @@ grid-template-rows: repeat(3, 1fr);
     @include tablet {
       display: block;
       grid-area: 3 / 2 / 4 / 3; 
+      height: calc(50vh - 10px);
     img {
       width: 100%;
       height: 100%;

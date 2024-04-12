@@ -11,7 +11,7 @@ const swiper = new Swiper ('.swiper-hero', {
 //  centeredSlidesBounds: true,
 
 loop: true,
-spaceBetween: 90,
+
   breakpoints: {
     // when window width is >= 320px
     // 360: {
