@@ -20,6 +20,8 @@ const [news, setNews, useNewsEffect] = useState({
 });
 
 useNewsEffect(({ data, container,step,part, type }) => {
+
+
   const dataFiltredByType = type==="all"? data : data.filter(el =>  el.type === type)
   console.log(dataFiltredByType);
 

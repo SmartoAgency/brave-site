@@ -16,7 +16,7 @@ const [property, setProperty, usePropertyEffect] = useState({
   container: document.querySelector('.property__container'),
   data: [],
   part:1,
-  step:3,
+  step:6,
 });
 
 usePropertyEffect(({ data, container, part, step }) => {
@@ -68,13 +68,13 @@ if (loadMoreBtn){loadMoreBtn.addEventListener("click", function () {
 const url = new URL(window.location.href);
 const params = new URLSearchParams(url.search);
 const selectData = document.querySelectorAll('.select');
-const minArea = params.get('area_MIN') ? +params.get('area_MIN') : 10;
-const maxArea = params.get('area_MAX') ? +params.get('area_MAX') : 90;
+const minArea = params.get('area_MIN') ? +params.get('area_MIN') : 9;
+const maxArea = params.get('area_MAX') ? +params.get('area_MAX') : 300;
 
 $('#doubleRange').ionRangeSlider({
   skin: 'big',
-  min: 0,
-  max: 100,
+  min: 9,
+  max: 300,
   from: minArea,
   to: maxArea,
   type: 'double',
@@ -152,34 +152,7 @@ function selectChoose() {
   select.classList.remove('is-active');
 }
 
-// let select = function() {
-//   let selectHeader = document.querySelectorAll('.select__header');
-//   let selectItem = document.querySelectorAll('.select__item');
 
-//   selectHeader.forEach(item => {
-//     item.addEventListener('click', selectToggle);
-//   });
-
-//   selectItem.forEach(item => {
-//     item.addEventListener('click', selectChoose);
-//   });
-
-//   function selectToggle() {
-//     this.parentElement.classList.toggle('is-active');
-//   }
-
-//   function selectChoose() {
-//     let text = this.innerText,
-//       select = this.closest('.select'),
-//       currentText = select.querySelector('.select__current');
-//     let value = this.getAttribute(`data-${select.dataset.name}`);
-   
-//     select.dataset.value = value;
-//     currentText.innerText = text;
-//     select.classList.remove('is-active');
-//   }
-// };
-// select();
 
 
 
@@ -224,6 +197,30 @@ if (formProperty) {
         });
       });
   });
+}
+ const selectField = document.querySelectorAll(".select")
+const resetBtn = document.querySelector("[data-reset]")
+if(resetBtn) {
+  resetBtn.addEventListener("click", function () {
+ 
+    window.history.replaceState({}, document.title, window.location.pathname);
+    selectField.forEach(select=> {
+  
+  const allItem = select.querySelector(`[data-${select.dataset.name}="all"]`) //потім вкзати data-${select.dataset.name}="all"
+  
+  let text = allItem.textContent
+  let value = allItem.getAttribute(`data-${select.dataset.name}`);
+  let currentText = select.querySelector('.select__current');
+  
+  currentText.innerText = text;
+  select.dataset.value = value;
+  
+  })
+  dataSlider.update({
+    from:9,
+    to: 300
+  })
+  })
 }
 
 // //Custom select END

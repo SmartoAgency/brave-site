@@ -150,6 +150,7 @@
 }
 .swiper-single-news {
   position: relative;
+  margin-bottom: 40px;
   .swiper-slide {
     height: 60vw;
     @include laptop {

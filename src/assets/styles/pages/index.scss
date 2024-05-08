@@ -166,6 +166,7 @@
   padding: 10px 20px;
   text-transform: uppercase;
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  color: $dark-color;
   &::after {
     content: '';
     position: absolute;
@@ -606,7 +607,7 @@
   }
   &__btn {
     @extend .general-button;
-    @include descr-text;
+    @include small-descr-text;
     margin-top: 8px;
     width: 100%;
     @include tablet {
@@ -1032,7 +1033,7 @@
     margin-bottom: 20px;
   }
 }
-.real-estate__select-wrap {
+ .property__form .real-estate__select-wrap, .real-estate__content .real-estate__select-wrap {
   &[data-name="area"]{
     padding-bottom: 0;
   }

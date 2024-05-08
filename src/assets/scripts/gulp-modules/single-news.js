@@ -16,3 +16,5 @@ const swiper = new Swiper('.swiper-single-news', {
     nextEl: '.swiper-news-button-next',
   },
 });
+ 
+// document.querySelector(".single-news__content-wrap").querySelectorAll('*').forEach(el => el.classList.add('dont-reset-me'))

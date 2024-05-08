@@ -46,3 +46,14 @@ document.body.addEventListener('click', function(evt) {
     return overflow.classList.add('hidden');
   }
 });
+
+
+const loader = document.querySelector(".loader-wrap");
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.onload = function () {
+      window.setTimeout(() => {
+        loader.classList.add("loaded")
+      }, 1200)
+    }
+  })
